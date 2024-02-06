@@ -11,7 +11,7 @@ function Landing() {
       fetch(`https://regaloss.co/api/business-name-generators?filters[Slug][$eq]=${slug}`)
         .then(response => response.json())
         .then(data => {
-          // Asumiendo que los datos que quieres están en data.data[0].attributes
+
           setData(data.data[0].attributes);
         })
         .catch(error => {
